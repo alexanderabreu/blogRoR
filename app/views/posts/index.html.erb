@@ -5,6 +5,8 @@
     <% @posts.each do |post| %>
     <br>
     <%= link_to post.title, post %>
-    <br>
+    <p align="right"> Posted <%= time_ago_in_words(post.created_at)%> ago </p>
+
+    <hr>
     <% end %>
     <br>
